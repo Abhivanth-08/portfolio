@@ -9,8 +9,8 @@ import { FloatingObjects } from '@/components/FloatingObjects';
 const Index = () => {
   return (
     <div className="relative w-full overflow-x-hidden">
-      {/* Floating 3D Objects Background */}
-      <FloatingObjects />
+  {/* Floating 3D Objects Background (now using logo planes) */}
+  <FloatingObjects />
       
       {/* Smooth scroll behavior */}
       <style>{`

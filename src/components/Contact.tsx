@@ -6,19 +6,19 @@ const socialLinks = [
   { 
     icon: Linkedin, 
     label: 'LinkedIn', 
-    href: 'https://linkedin.com/in/abhivanth',
+    href: 'https://www.linkedin.com/in/abhivanth-r-223b2b281',
     color: 'hover:text-blue-400'
   },
   { 
     icon: Github, 
     label: 'GitHub', 
-    href: 'https://github.com/abhivanthr',
+    href: 'https://github.com/Abhivanth-08',
     color: 'hover:text-gray-300'
   },
   { 
     icon: Code2, 
     label: 'LeetCode', 
-    href: 'https://leetcode.com/abhivanth',
+    href: 'https://leetcode.com/u/Abhivanth_R',
     color: 'hover:text-yellow-400'
   },
   { 
@@ -171,7 +171,7 @@ export const Contact = () => {
           className="mt-20 text-center"
         >
           <p className="text-muted-foreground text-sm">
-            © 2025 Abhivanth R. Built with cutting-edge tech and endless curiosity.
+            © 2025 Abhivanth R.
           </p>
         </motion.div>
       </div>
