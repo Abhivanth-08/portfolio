@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { GraduationCap, Award, BookOpen, TrendingUp } from 'lucide-react';
+import { GraduationCap, Award, BookOpen, TrendingUp , Briefcase} from 'lucide-react';
 
 const timelineItems = [
   {
@@ -12,8 +12,17 @@ const timelineItems = [
     achievements: ['CGPA: 8.8', 'Research & Projects'],
   },
   {
+    icon: Briefcase,
+    year: 'Jan 2025 - Feb 2025',
+    title: 'Internship - ML Engineer',
+    subtitle: 'Nitroware Technologies',
+    institution: 'Coimbatore',
+    description: 'Built a machine learning model to predict breaching events and gained hands-on experience with Flask and various ML algorithms.',
+    achievements: ['Developed predictive ML model', 'Implemented Flask-based application', 'Enhanced understanding of ML workflows'],
+  },
+  {
     icon: Award,
-    year: '2025',
+    year: ' Sep 2025',
     title: 'Publication (Accepted)',
     subtitle: 'Data Privacy in Sustainable Agriculture',
     institution: 'CRC Book Chapter',
