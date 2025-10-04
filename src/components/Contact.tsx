@@ -30,7 +30,7 @@ const socialLinks = [
   {
     icon: Download, 
     label: 'Resume', 
-    href: 'ABHIVANTH R.pdf',
+    href: 'https://drive.google.com/drive/folders/1IDmNuB4FX-_C1vHHt9TvQvyfLs3cuc52?usp=drive_link',
     color: 'hover:text-red-800'
   },
 ];
