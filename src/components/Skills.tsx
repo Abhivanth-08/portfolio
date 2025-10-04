@@ -2,16 +2,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
 const skillsData = {
-  'AI & ML': {
+  'AI & ML ': {
     skills: ['PyTorch', 'Scikit-learn', 'LangChain', 'NLP', 'Deep Learning', 'OpenCV', 'CNN', 'YOLO'],
   },
-  'Programming': {
+  'Code Craft': {
     skills: ['Python', 'C', 'Java', 'R', 'SQL', 'MySQL'],
   },
-  'Tools': {
+  'Dev Tools': {
     skills: ['GitHub', 'FastAPI', 'PyMuPDF', 'Docling', 'LanceDB', 'Blender'],
   },
-  'IoT': {
+  'AI & IoT': {
     skills: ['Raspberry Pi', 'Adafruit QT PY', 'Sensors', 'Actuators', 'Embedded Systems'],
   },
 };
@@ -52,7 +52,7 @@ export const Skills = () => {
             SKILL NETWORK
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Multi-layered expertise architecture - Input → Processing → Output
+            The Neural Fabric Behind My Creations
           </p>
         </motion.div>
 
@@ -68,7 +68,7 @@ export const Skills = () => {
               className="text-center"
             >
               <span className="text-sm font-display font-bold text-primary uppercase tracking-wider">
-                Input Layer
+                
               </span>
             </motion.div>
             <motion.div
@@ -79,7 +79,7 @@ export const Skills = () => {
               className="text-center"
             >
               <span className="text-sm font-display font-bold text-primary uppercase tracking-wider">
-                Hidden Layer
+                
               </span>
             </motion.div>
             <motion.div
@@ -90,7 +90,7 @@ export const Skills = () => {
               className="text-center"
             >
               <span className="text-sm font-display font-bold text-primary uppercase tracking-wider">
-                Output Layer
+                
               </span>
             </motion.div>
           </div>
@@ -116,10 +116,10 @@ export const Skills = () => {
             {categories.map((category, index) => {
               // SKILLS: Circle button - w-32 h-32 (128px), positioned in first column
               // Grid has 3 columns with gap-32, so each column is ~33.33% wide
-              const skillsColumnCenter = 200; // Center of first column in viewBox
+              const skillsColumnCenter = 100; // Center of first column in viewBox
               const skillsRadius = 64; // Half of 128px
               const skillsRightEdgeX = skillsColumnCenter + skillsRadius; // 264
-              const skillsY = 300; // Vertical center
+              const skillsY = 280; // Vertical center
               
               // Category buttons: In middle column
               // Button structure: px-8 py-5, has a dot (w-3 h-3) with gap-3 before text
@@ -130,7 +130,7 @@ export const Skills = () => {
               const dotPositionX = buttonLeftEdge + 35; // Position of the dot center
               
               // Vertical positioning: gap-16 (64px) between buttons
-              const firstButtonY = 140; // Y position of first button center
+              const firstButtonY = 100; // Y position of first button center
               const buttonSpacing = 120; // 64px gap + ~56px button height
               const categoryY = firstButtonY + index * buttonSpacing;
               
@@ -163,16 +163,16 @@ export const Skills = () => {
                 
                 // Right edge of category button (accounting for text width)
                 const categoryButtonRightX = 700; // Right side of middle column
-                const categoryY = 140 + categoryIndex * 120;
+                const categoryY = 100 + categoryIndex * 120;
                 
                 // Sub-skill buttons: in right third (66%-100%)
                 // Dots are at left edge + padding (px-5 = 20px) + dot position
-                const subButtonLeftX = 900; // Left side of right column
+                const subButtonLeftX = 875; // Left side of right column
                 const dotOffsetX = 28; // px-5 padding + dot position
                 const subDotX = subButtonLeftX + dotOffsetX;
                 
                 const skillCount = skillsData[hoveredNode].skills.length;
-                const subButtonSpacing = 44;
+                const subButtonSpacing = 55;
                 const totalHeight = skillCount * subButtonSpacing;
                 const startY = 300 - (totalHeight / 2); // Center vertically
                 const subY = startY + skillIndex * subButtonSpacing;
@@ -334,7 +334,7 @@ export const Skills = () => {
           className="mt-20 text-center"
         >
           <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-            <span className="text-primary font-bold">Hover</span> over any layer to illuminate the neural pathways and explore the interconnected skill architecture
+            <span className="text-primary font-bold"></span> 
           </p>
         </motion.div>
       </div>
