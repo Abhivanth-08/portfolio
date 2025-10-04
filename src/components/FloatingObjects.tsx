@@ -28,7 +28,7 @@ export const FloatingObjects = () => {
   if (!mounted) return null;
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0" style={{ opacity: 0.3 }}>
+    <div className="fixed inset-0 pointer-events-none z-0 hidden sm:block" style={{ opacity: 0.3 }}>
       <Canvas className="w-full h-full" camera={{ position: [0, 0, 10], fov: 50 }}>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1} color="#FFD700" />

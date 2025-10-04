@@ -117,6 +117,7 @@ export const About = () => {
                     src={abhivanthPhoto} 
                     alt="Abhivanth R" 
                     className="w-full h-full object-cover liquid-distortion"
+                    style={{ width: '100%', height: '100%' }}
                   />
                   {/* Holographic overlay */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-accent/20 opacity-60 mix-blend-overlay" />

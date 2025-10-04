@@ -21,7 +21,7 @@ export const Skills = () => {
   const categories = Object.keys(skillsData);
 
   return (
-    <section id="skills" className="relative py-32 px-6 overflow-hidden bg-background">
+    <section id="skills" className="relative py-32 px-6 overflow-hidden bg-transparent">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

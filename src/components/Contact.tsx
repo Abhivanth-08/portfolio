@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Mail, Linkedin, Github, Code2, Send, Terminal } from 'lucide-react';
+import { Mail, Linkedin, Github, Code2, Send, Terminal, Download } from 'lucide-react';
 
 const socialLinks = [
   { 
@@ -26,6 +26,12 @@ const socialLinks = [
     label: 'Email', 
     href: 'mailto:abhicoder39@gmail.com',
     color: 'hover:text-red-400'
+  },
+  {
+    icon: Download, 
+    label: 'Resume', 
+    href: 'ABHIVANTH R.pdf',
+    color: 'hover:text-red-800'
   },
 ];
 
