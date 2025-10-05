@@ -6,44 +6,62 @@ const projects = [
   {
     title: 'Versatile Mini Robot',
     category: 'Robotics & IoT',
-    description: 'Designed a multifunctional robot with object recognition, color detection, QR/text scanning, translation, and virtual assistance.',
+    description:
+      'Designed a multifunctional robot with object recognition, color detection, QR/text scanning, translation, and virtual assistance.',
     tech: ['Python', 'OpenCV', 'Raspberry Pi', 'Sensors'],
     gradient: 'from-primary/20 to-accent/20',
+    demo: 'https://example.com/versatile-mini-robot', 
+    github: 'https://github.com/Abhivanth-08/Mini_Robot',
   },
   {
     title: 'NDT Robot',
     category: 'Industrial Automation',
-    description: 'Autonomous mini robot using ultrasonic, infrared, and eddy current sensors for real-time crack and defect detection with ML.',
+    description:
+      'Autonomous mini robot using ultrasonic, infrared, and eddy current sensors for real-time crack and defect detection with ML.',
     tech: ['Python', 'OpenCV', 'Sensors', 'ML', 'Raspberry Pi'],
     gradient: 'from-accent/20 to-primary/20',
+    demo: 'https://example.com/ndt-robot',
+    github: 'https://github.com/Abhivanth-08/NDT',
   },
   {
     title: 'Info Redaction Agent',
     category: 'AI & NLP',
-    description: 'AI system to automatically detect and redact PII from PDFs, text, and structured data ensuring privacy compliance.',
+    description:
+      'AI system to automatically detect and redact PII from PDFs, text, and structured data ensuring privacy compliance.',
     tech: ['Python', 'LangChain', 'PyMuPDF', 'Docling', 'FastAPI'],
     gradient: 'from-primary/20 to-accent/20',
+    demo: 'https://0207abhi-info-redaction.hf.space',
+    github: 'https://github.com/Abhivanth-08/info_redaction_main',
   },
   {
     title: 'College Chatbot',
     category: 'AI Assistant',
-    description: 'AI-powered chatbot automating admissions, events, food orders, and exam prep with real-time data access for the college.',
+    description:
+      'AI-powered chatbot automating admissions, events, food orders, and exam prep with real-time data access for the college.',
     tech: ['Python', 'LangChain', 'Docling', 'LanceDB', 'FastAPI'],
     gradient: 'from-accent/20 to-primary/20',
+    demo: 'https://example.com/college-chatbot',
+    github: 'https://github.com/Abhivanth-08/College_chatbot',
   },
   {
     title: 'Resume Reformer Agent',
     category: 'AI Tools',
-    description: 'AI agent that reformats and optimizes resumes based on job descriptions to improve ATS compatibility and keyword alignment.',
+    description:
+      'AI agent that reformats and optimizes resumes based on job descriptions to improve ATS compatibility and keyword alignment.',
     tech: ['Python', 'LangChain', 'Prompt Engineering', 'PyMuPDF', 'Docling'],
     gradient: 'from-primary/20 to-accent/20',
+    demo: 'https://example.com/resume-reformer-agent',
+    github: 'https://github.com/Abhivanth-08/Resume-Reformer',
   },
   {
     title: 'Exhibit Defect Detection',
     category: 'Computer Vision',
-    description: 'AI-CNN-based system integrated with IoT for detecting defects in museum exhibits and enabling predictive maintenance.',
+    description:
+      'AI-CNN-based system integrated with IoT for detecting defects in museum exhibits and enabling predictive maintenance.',
     tech: ['Python', 'PyTorch', 'CNN', 'Raspberry Pi'],
     gradient: 'from-accent/20 to-primary/20',
+    demo: 'https://example.com/exhibit-defect-detection',
+    github: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
   },
 ];
 
@@ -54,11 +72,14 @@ export const Projects = () => {
     <section id="projects" className="relative py-32 px-6 overflow-hidden">
       {/* Background Grid */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(hsl(var(--primary) / 0.3) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(var(--primary) / 0.3) 1px, transparent 1px)`,
-          backgroundSize: '50px 50px',
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `linear-gradient(hsl(var(--primary) / 0.3) 1px, transparent 1px),
+                             linear-gradient(90deg, hsl(var(--primary) / 0.3) 1px, transparent 1px)`,
+            backgroundSize: '50px 50px',
+          }}
+        />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
@@ -91,25 +112,25 @@ export const Projects = () => {
               onHoverEnd={() => setHoveredIndex(null)}
               className="group relative"
             >
-              {/* Card Container */}
               <motion.div
-                whileHover={{ 
+                whileHover={{
                   y: -10,
                   rotateY: 5,
-                  transition: { duration: 0.3 }
+                  transition: { duration: 0.3 },
                 }}
                 className="relative h-full p-8 rounded-2xl glass-panel border border-primary/20 hover:border-primary/50 transition-all duration-500 overflow-hidden"
                 style={{ transformStyle: 'preserve-3d' }}
               >
                 {/* Gradient Background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                />
+
                 {/* Glow Effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 blur-2xl bg-primary/20 transition-opacity duration-500" />
 
-                {/* Content */}
                 <div className="relative z-10">
-                  {/* Category Badge */}
+                  {/* Category */}
                   <div className="inline-block px-4 py-2 mb-4 rounded-lg bg-primary/10 border border-primary/30 text-primary text-sm font-semibold">
                     {project.category}
                   </div>
@@ -138,14 +159,24 @@ export const Projects = () => {
 
                   {/* Action Buttons */}
                   <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/20 hover:bg-primary/30 border border-primary/30 text-primary transition-colors duration-300">
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/20 hover:bg-primary/30 border border-primary/30 text-primary transition-colors duration-300"
+                    >
                       <ExternalLink className="w-4 h-4" />
                       <span className="text-sm font-medium">View</span>
-                    </button>
-                    <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary hover:bg-secondary/80 border border-primary/20 text-foreground transition-colors duration-300">
+                    </a>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary hover:bg-secondary/80 border border-primary/20 text-foreground transition-colors duration-300"
+                    >
                       <Github className="w-4 h-4" />
                       <span className="text-sm font-medium">Code</span>
-                    </button>
+                    </a>
                   </div>
                 </div>
 
