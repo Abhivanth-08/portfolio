@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Cpu, Zap, Rocket } from 'lucide-react';
+import { Brain, Cpu, Zap, Rocket, Briefcase } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import abhivanthPhoto from '@/assets/abhivanth-photo.png';
 import { RippleEffect } from './RippleEffect';
@@ -7,10 +7,16 @@ import { useParallax } from '@/hooks/useParallax';
 
 const domains = [
   {
+  icon: Briefcase,
+  title: 'Freelancer',
+  description: 'Delivering high-quality, customized solutions across AI, web, and app development. Turning unique ideas into impactful, scalable products with precision and creativity.',
+  },
+  {
     icon: Brain,
     title: 'AI Engineer',
     description: 'Specializing in machine learning, computer vision, and intelligent systems. Building AI agents that solve real-world problems with PyTorch, LangChain, and OpenCV.',
   },
+
   {
     icon: Cpu,
     title: 'IoT Developer',
