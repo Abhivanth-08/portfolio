@@ -139,7 +139,7 @@ function HologramSphere({ isMobile }: { isMobile: boolean }) {
 export const Hero3D = () => {
   const [isTyping, setIsTyping] = useState(true);
   const [displayText, setDisplayText] = useState('');
-  const fullText = 'AI Engineer';
+  const fullText = 'Transforming Ideas into Intelligent Realities';
   const isMobile = useMobile();
   const parallaxSlow = useParallax(isMobile ? 0.1 : 0.3);
   const parallaxMedium = useParallax(isMobile ? 0.2 : 0.5);
