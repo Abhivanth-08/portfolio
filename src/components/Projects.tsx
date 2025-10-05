@@ -10,7 +10,7 @@ const projects = [
       'Designed a multifunctional robot with object recognition, color detection, QR/text scanning, translation, and virtual assistance.',
     tech: ['Python', 'OpenCV', 'Raspberry Pi', 'Sensors'],
     gradient: 'from-primary/20 to-accent/20',
-    demo: 'https://example.com/versatile-mini-robot', 
+    demo: 'https://github.com/Abhivanth-08/Mini_Robot', 
     github: 'https://github.com/Abhivanth-08/Mini_Robot',
   },
   {
@@ -20,7 +20,7 @@ const projects = [
       'Autonomous mini robot using ultrasonic, infrared, and eddy current sensors for real-time crack and defect detection with ML.',
     tech: ['Python', 'OpenCV', 'Sensors', 'ML', 'Raspberry Pi'],
     gradient: 'from-accent/20 to-primary/20',
-    demo: 'https://example.com/ndt-robot',
+    demo: 'https://github.com/Abhivanth-08/NDT',
     github: 'https://github.com/Abhivanth-08/NDT',
   },
   {
@@ -40,7 +40,7 @@ const projects = [
       'AI-powered chatbot automating admissions, events, food orders, and exam prep with real-time data access for the college.',
     tech: ['Python', 'LangChain', 'Docling', 'LanceDB', 'FastAPI'],
     gradient: 'from-accent/20 to-primary/20',
-    demo: 'https://example.com/college-chatbot',
+    demo: 'https://github.com/Abhivanth-08/College_chatbot',
     github: 'https://github.com/Abhivanth-08/College_chatbot',
   },
   {
@@ -50,7 +50,7 @@ const projects = [
       'AI agent that reformats and optimizes resumes based on job descriptions to improve ATS compatibility and keyword alignment.',
     tech: ['Python', 'LangChain', 'Prompt Engineering', 'PyMuPDF', 'Docling'],
     gradient: 'from-primary/20 to-accent/20',
-    demo: 'https://example.com/resume-reformer-agent',
+    demo: 'https://github.com/Abhivanth-08/Resume-Reformer',
     github: 'https://github.com/Abhivanth-08/Resume-Reformer',
   },
   {
@@ -60,7 +60,7 @@ const projects = [
       'AI-CNN-based system integrated with IoT for detecting defects in museum exhibits and enabling predictive maintenance.',
     tech: ['Python', 'PyTorch', 'CNN', 'Raspberry Pi'],
     gradient: 'from-accent/20 to-primary/20',
-    demo: 'https://example.com/exhibit-defect-detection',
+    demo: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
     github: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
   },
 ];
