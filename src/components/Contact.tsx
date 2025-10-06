@@ -30,14 +30,17 @@ const socialLinks = [
   {
     icon: Download, 
     label: 'Resume', 
-    href: 'https://drive.google.com/drive/folders/1IDmNuB4FX-_C1vHHt9TvQvyfLs3cuc52?usp=drive_link',
+    href: 'ABHIVANTH R.pdf',
     color: 'hover:text-red-800'
   },
 ];
 
 export const Contact = () => {
-  const [terminalText, setTerminalText] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
   const [isFocused, setIsFocused] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   return (
     <section id="contact" className="relative py-32 px-6 overflow-hidden">
@@ -87,29 +90,94 @@ export const Contact = () => {
             <div className="space-y-4 font-mono text-sm">
               <div className="flex items-start gap-2">
                 <span className="text-primary">$</span>
-                <span className="text-muted-foreground">cat message.txt</span>
-              </div>
-              
-              <div className="pl-4">
-                <textarea
-                  placeholder="Type your message here... Press Ctrl+D to send"
-                  value={terminalText}
-                  onChange={(e) => setTerminalText(e.target.value)}
-                  onFocus={() => setIsFocused(true)}
-                  onBlur={() => setIsFocused(false)}
-                  className="w-full h-32 bg-transparent border border-primary/20 rounded-lg p-4 text-foreground placeholder:text-muted-foreground focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 resize-none"
-                />
+                <span className="text-muted-foreground">connect --name --email --message</span>
               </div>
 
-              {/* Send Button */}
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="flex items-center gap-3 px-6 py-3 bg-primary/20 hover:bg-primary/30 border border-primary/30 rounded-lg text-primary font-bold transition-all duration-300 group"
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  // purely UI-only: mark submitted state and clear the form
+                  setSubmitted(true);
+                  setName('');
+                  setEmail('');
+                  setMessage('');
+                }}
+                className="space-y-4"
               >
-                <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                <span>Send Message</span>
-              </motion.button>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-sm text-muted-foreground block mb-1">Your name</label>
+                    <input
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      onFocus={() => setIsFocused(true)}
+                      onBlur={() => setIsFocused(false)}
+                      placeholder="Jane Doe"
+                      className="w-full bg-transparent border border-primary/20 rounded-lg p-3 text-foreground placeholder:text-muted-foreground focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="text-sm text-muted-foreground block mb-1">Your email</label>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      onFocus={() => setIsFocused(true)}
+                      onBlur={() => setIsFocused(false)}
+                      placeholder="you@example.com"
+                      className="w-full bg-transparent border border-primary/20 rounded-lg p-3 text-foreground placeholder:text-muted-foreground focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="text-sm text-muted-foreground block mb-1">Message</label>
+                  <textarea
+                    placeholder="Type your message here..."
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    onFocus={() => setIsFocused(true)}
+                    onBlur={() => setIsFocused(false)}
+                    className="w-full h-36 bg-transparent border border-primary/20 rounded-lg p-4 text-foreground placeholder:text-muted-foreground focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 resize-none"
+                  />
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <motion.button
+                    type="submit"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="flex items-center gap-3 px-6 py-3 bg-primary/20 hover:bg-primary/30 border border-primary/30 rounded-lg text-primary font-bold transition-all duration-300 group"
+                  >
+                    <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    <span>Send Message</span>
+                  </motion.button>
+                </div>
+              </form>
+
+                {/* debug removed: UI-only form now */}
+
+              {/*
+                EMAILJS / Direct-send notes:
+                - If you want the site itself to send the email (so the user doesn't need to open their mail client), you need a server-side mail sender or a third-party client-side service such as EmailJS.
+                - EmailJS allows sending from the browser but requires you to create an account and use your Service ID, Template ID and Public Key/User ID. Those values are "credentials" and should be stored in environment variables (Vite: VITE_EMAILJS_USER, etc.).
+                - Example (install `emailjs-com` and uncomment below):
+
+                import emailjs from 'emailjs-com';
+
+                // emailjs.send(serviceID, templateID, templateParams, userID)
+                emailjs.send('service_xxx', 'template_xxx', {
+                  from_name: name,
+                  from_email: email,
+                  message: message,
+                }, import.meta.env.VITE_EMAILJS_USER)
+                .then(res => setStatus('sent'))
+                .catch(err => setStatus('error'));
+
+                - Alternatively create a small backend endpoint (Node/Express, serverless function) that accepts the form and uses SMTP (nodemailer) or an API (SendGrid, SES). That backend will need credentials (SMTP username/password or API keys). Keep those secrets on the server — never embed them in frontend code.
+              */}
 
               <div className="flex items-start gap-2 text-green-400">
                 <span className="text-primary">$</span>
