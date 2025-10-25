@@ -63,6 +63,17 @@ const projects = [
     demo: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
     github: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
   },
+  {
+    title: 'AI Foley Studio',
+    category: 'AI / Audio-Tech',
+    description:
+      'Developed an AI-powered web tool that automatically generates and syncs realistic Foley sound effects for video clips, enhancing audio quality and immersion using machine learning and audio processing.',
+    tech: ['Langchain', 'Computer Vision','Mediapipe','YOLO'],
+    gradient: 'from-secondary/20 to-accent/20',
+    demo: 'https://ai-foley-studio.vercel.app/',
+    github: 'https://github.com/Abhivanth-08/AI-Foley-Studio',
+  },
+  
 ];
 
 export const Projects = () => {
