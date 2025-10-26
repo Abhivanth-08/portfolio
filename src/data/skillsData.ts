@@ -4,7 +4,10 @@ export const skillsData = [
     color: '#8B5CF6', 
     skills: [
       { name: 'PyTorch', description: 'Deep learning framework for neural networks' },
+      { name: 'Scikit-learn', description: 'Classic ML library for models and pipelines' },
       { name: 'LangChain', description: 'Framework for building RAG-based intelligent LLM applications' },
+      { name: 'NLP', description: 'Natural Language Processing techniques and tools' },
+      { name: 'Deep Learning', description: 'Neural networks and representation learning' },
       { name: 'OpenCV', description: 'Computer vision library for image processing' },
       { name: 'CNN', description: 'Convolutional Neural Networks for image recognition' },
       { name: 'YOLO', description: 'Real-time object detection algorithm' }

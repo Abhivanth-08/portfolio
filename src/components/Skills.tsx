@@ -1,24 +1,12 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-
-const skillsData = {
-  'AI & ML ': {
-    skills: ['PyTorch', 'Scikit-learn', 'LangChain', 'NLP', 'Deep Learning', 'OpenCV', 'CNN', 'YOLO'],
-  },
-  'Code Craft': {
-    skills: ['Python', 'C', 'Java', 'R', 'SQL', 'MySQL'],
-  },
-  'Dev Tools': {
-    skills: ['GitHub', 'FastAPI', 'PyMuPDF', 'Docling', 'LanceDB', 'Blender'],
-  },
-  'AI & IoT': {
-    skills: ['Raspberry Pi', 'Adafruit QT PY', 'Sensors', 'Actuators', 'Embedded Systems'],
-  },
-};
+import MobileSkills from './MobileSkills';
+import { skillsData } from '../data/skillsData';
 
 export const Skills = () => {
   const [hoveredNode, setHoveredNode] = useState<string | null>(null);
-  const categories = Object.keys(skillsData);
+  const categories = skillsData.map((c) => c.name);
+  const hoveredCategory = hoveredNode ? skillsData.find((c) => c.name === hoveredNode) : null;
 
   return (
     <section id="skills" className="relative py-32 px-6 overflow-hidden bg-transparent">
@@ -56,8 +44,11 @@ export const Skills = () => {
           </p>
         </motion.div>
 
-        {/* Neural Network Architecture */}
-        <div className="relative min-h-[600px] py-12">
+  {/* Mobile-only simple skills cards (shows on small screens) */}
+  <MobileSkills />
+
+  {/* Neural Network Architecture (hidden on small screens) */}
+  <div className="hidden md:block relative min-h-[600px] py-12">
           
           {/* Layer Labels */}
           <div className="absolute top-0 left-0 right-0 flex justify-between px-12 mb-8">
@@ -158,8 +149,8 @@ export const Skills = () => {
             
             {/* Lines from RIGHT of category buttons to LEFT DOT of sub-skill buttons */}
             <AnimatePresence>
-              {hoveredNode && skillsData[hoveredNode].skills.map((_, skillIndex) => {
-                const categoryIndex = categories.indexOf(hoveredNode);
+              {hoveredCategory && hoveredCategory.skills.map((_, skillIndex) => {
+                const categoryIndex = categories.indexOf(hoveredNode ?? '');
                 
                 // Right edge of category button (accounting for text width)
                 const categoryButtonRightX = 700; // Right side of middle column
@@ -171,7 +162,7 @@ export const Skills = () => {
                 const dotOffsetX = 28; // px-5 padding + dot position
                 const subDotX = subButtonLeftX + dotOffsetX;
                 
-                const skillCount = skillsData[hoveredNode].skills.length;
+                const skillCount = hoveredCategory!.skills.length;
                 const subButtonSpacing = 55;
                 const totalHeight = skillCount * subButtonSpacing;
                 const startY = 300 - (totalHeight / 2); // Center vertically
@@ -274,7 +265,7 @@ export const Skills = () => {
             {/* OUTPUT LAYER - Sub-skills (only show for hovered category) */}
             <div className="flex flex-col justify-center min-h-[500px] relative" style={{ zIndex: 3 }}>
               <AnimatePresence mode="wait">
-                {hoveredNode && (
+                {hoveredCategory && (
                   <motion.div
                     key={hoveredNode}
                     initial={{ opacity: 0 }}
@@ -283,9 +274,9 @@ export const Skills = () => {
                     transition={{ duration: 0.3 }}
                     className="space-y-2"
                   >
-                    {skillsData[hoveredNode].skills.map((skill, skillIndex) => (
+                    {hoveredCategory!.skills.map((skill, skillIndex) => (
                       <motion.div
-                        key={`output-${hoveredNode}-${skill}`}
+                        key={`output-${hoveredNode}-${skill.name}`}
                         initial={{ opacity: 0, x: 50, scale: 0.8 }}
                         animate={{ opacity: 1, x: 0, scale: 1 }}
                         exit={{ opacity: 0, x: 50, scale: 0.8 }}
@@ -312,7 +303,7 @@ export const Skills = () => {
                               }}
                             />
                             <span className="text-sm font-bold text-foreground">
-                              {skill}
+                              {skill.name}
                             </span>
                           </div>
                         </motion.div>
