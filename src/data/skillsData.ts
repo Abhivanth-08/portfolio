@@ -14,17 +14,7 @@ export const skillsData = [
     ]
   },
   { 
-    name: 'IoT & Hardware', 
-    color: '#F59E0B', 
-    skills: [
-      { name: 'Raspberry Pi', description: 'Single-board computer for IoT projects' },
-      { name: 'Sensors', description: 'Environmental and motion sensing devices' },
-      { name: 'Arduino', description: 'Microcontroller platform for hardware projects' },
-      { name: 'Embedded Systems', description: 'Specialized computing systems in devices' }
-    ]
-  },
-  { 
-    name: 'Programming Languages', 
+    name: 'Code Craft', 
     color: '#3B82F6', 
     skills: [
       { name: 'Python', description: 'Versatile language for AI, data science, and automation' },
@@ -35,7 +25,7 @@ export const skillsData = [
     ]
   },
   { 
-    name: 'Tools & Platforms', 
+    name: 'Dev Tools', 
     color: '#10B981', 
     skills: [
       { name: 'FastAPI', description: 'Modern Python web framework for APIs' },
@@ -44,7 +34,17 @@ export const skillsData = [
       { name: 'LanceDB', description: 'Vector database for AI applications' },
       { name: 'Blender', description: '3D modeling and animation software' }
     ]
-  }
+  },
+  { 
+    name: 'IoT', 
+    color: '#F59E0B', 
+    skills: [
+      { name: 'Raspberry Pi', description: 'Single-board computer for IoT projects' },
+      { name: 'Sensors', description: 'Environmental and motion sensing devices' },
+      { name: 'Arduino', description: 'Microcontroller platform for hardware projects' },
+      { name: 'Embedded Systems', description: 'Specialized computing systems in devices' }
+    ]
+  },
 ];
 
 export type SkillCategory = typeof skillsData[number];
