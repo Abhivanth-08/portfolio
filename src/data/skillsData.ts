@@ -1,6 +1,6 @@
 export const skillsData = [
   { 
-    name: 'AI/ML', 
+    name: 'AI & ML', 
     color: '#8B5CF6', 
     skills: [
       { name: 'PyTorch', description: 'Deep learning framework for neural networks' },
@@ -36,7 +36,7 @@ export const skillsData = [
     ]
   },
   { 
-    name: 'IoT', 
+    name: 'AI & IoT', 
     color: '#F59E0B', 
     skills: [
       { name: 'Raspberry Pi', description: 'Single-board computer for IoT projects' },
