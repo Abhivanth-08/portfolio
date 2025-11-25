@@ -28,7 +28,7 @@ const projects = [
     category: 'AI & NLP',
     description:
       'AI system to automatically detect and redact PII from PDFs, text, and structured data ensuring privacy compliance.',
-    tech: ['Python', 'LangChain', 'PyMuPDF', 'Docling', 'FastAPI'],
+    tech: ['Python', 'LangChain', 'PyMuPDF', 'Docling', 'FastAPI','TypeScript'],
     gradient: 'from-primary/20 to-accent/20',
     demo: 'https://0207abhi-info-redaction.hf.space',
     github: 'https://github.com/Abhivanth-08/info_redaction_main',
@@ -38,7 +38,7 @@ const projects = [
     category: 'AI Assistant',
     description:
       'AI-powered chatbot automating admissions, events, food orders, and exam prep with real-time data access for the college.',
-    tech: ['Python', 'LangChain', 'Docling', 'LanceDB', 'FastAPI'],
+    tech: ['Python', 'LangChain', 'Docling', 'LanceDB', 'FastAPI','TypeScript'],
     gradient: 'from-accent/20 to-primary/20',
     demo: 'https://github.com/Abhivanth-08/College_chatbot',
     github: 'https://github.com/Abhivanth-08/College_chatbot',
@@ -68,12 +68,30 @@ const projects = [
     category: 'AI / Audio-Tech',
     description:
       'Developed an AI-powered web tool that automatically generates and syncs realistic Foley sound effects for video clips, enhancing audio quality and immersion using machine learning and audio processing.',
-    tech: ['Langchain', 'Computer Vision','Mediapipe','YOLO'],
+    tech: ['Langchain', 'Computer Vision','Mediapipe','YOLO','TypeScript','FastAPI'],
     gradient: 'from-secondary/20 to-accent/20',
     demo: 'https://ai-foley-studio.vercel.app/',
     github: 'https://github.com/Abhivanth-08/AI-Foley-Studio',
   },
-  
+  {
+    title: 'E Commerce Website',
+    category: 'Web Development',
+    description:
+      "J.V.Enterprise's  e-commerce platform designed to provide a seamless online shopping experience. It features user-friendly navigation, and a robust product management system, catering to both customers and sellers.",
+    tech: ['TypeScript','Supabase'],
+    gradient: 'from-primary/20 to-accent/20',
+    demo: 'https://jvenerprise.vercel.app', 
+    github: 'https://github.com/Abhivanth-08/JV_web',
+  },
+  {
+    title: 'Pull Request Review Agent',
+    category: 'AI Tools',
+    description:"An AI-powered Pull Request Review Agent that automatically analyzes PRs, summarizes changes, identifies issues, and provides actionable feedback. Built to speed up code reviews and improve developer productivity with intelligent insights.",
+    tech: ['TypeScript','Langchain','FastAPI','Github API'],
+    gradient: 'from-primary/20 to-accent/20',
+    demo: 'https://pr-review-phi.vercel.app', 
+    github: 'https://github.com/Abhivanth-08/PR_review',
+  }
 ];
 
 export const Projects = () => {
