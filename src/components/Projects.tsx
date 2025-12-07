@@ -10,7 +10,7 @@ const projects = [
       'Designed a multifunctional robot with object recognition, color detection, QR/text scanning, translation, and virtual assistance.',
     tech: ['Python', 'OpenCV', 'Raspberry Pi', 'Sensors'],
     gradient: 'from-primary/20 to-accent/20',
-    demo: 'https://github.com/Abhivanth-08/Mini_Robot', 
+    demo: 'https://drive.google.com/drive/folders/17Tsc5v9g0u-DJGQ5VVJw4F3BlIyOnl7W?usp=sharing', 
     github: 'https://github.com/Abhivanth-08/Mini_Robot',
   },
   {
@@ -20,7 +20,7 @@ const projects = [
       'Autonomous mini robot using ultrasonic, infrared, and eddy current sensors for real-time crack and defect detection with ML.',
     tech: ['Python', 'OpenCV', 'Sensors', 'ML', 'Raspberry Pi'],
     gradient: 'from-accent/20 to-primary/20',
-    demo: 'https://github.com/Abhivanth-08/NDT',
+    demo: 'https://drive.google.com/drive/folders/17Tsc5v9g0u-DJGQ5VVJw4F3BlIyOnl7W?usp=sharing',
     github: 'https://github.com/Abhivanth-08/NDT',
   },
   {
