@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Video } from 'lucide-react';
 
 const projects = [
   {
@@ -12,6 +12,7 @@ const projects = [
     gradient: 'from-primary/20 to-accent/20',
     demo: 'https://drive.google.com/drive/folders/17Tsc5v9g0u-DJGQ5VVJw4F3BlIyOnl7W?usp=sharing', 
     github: 'https://github.com/Abhivanth-08/Mini_Robot',
+    videoDemo: 'https://drive.google.com/drive/folders/17Tsc5v9g0u-DJGQ5VVJw4F3BlIyOnl7W?usp=sharing',
   },
   {
     title: 'NDT Robot',
@@ -20,8 +21,9 @@ const projects = [
       'Autonomous mini robot using ultrasonic, infrared, and eddy current sensors for real-time crack and defect detection with ML.',
     tech: ['Python', 'OpenCV', 'Sensors', 'ML', 'Raspberry Pi'],
     gradient: 'from-accent/20 to-primary/20',
-    demo: 'https://drive.google.com/drive/folders/17Tsc5v9g0u-DJGQ5VVJw4F3BlIyOnl7W?usp=sharing',
+    demo: 'https://drive.google.com/drive/folders/1UBrKCh7Dp9HvPaqHzBxQhZXCg3emEnlA?usp=sharing',
     github: 'https://github.com/Abhivanth-08/NDT',
+    videoDemo: 'https://drive.google.com/drive/folders/1UBrKCh7Dp9HvPaqHzBxQhZXCg3emEnlA?usp=sharing',
   },
   {
     title: 'Info Redaction Agent',
@@ -32,6 +34,7 @@ const projects = [
     gradient: 'from-primary/20 to-accent/20',
     demo: 'https://0207abhi-info-redaction.hf.space',
     github: 'https://github.com/Abhivanth-08/info_redaction_main',
+    videoDemo: 'https://drive.google.com/drive/folders/1w_GbbsPzRUHrAsVCgLtWMCYKCrHNrujU?usp=sharing',
   },
   {
     title: 'College Chatbot',
@@ -42,6 +45,7 @@ const projects = [
     gradient: 'from-accent/20 to-primary/20',
     demo: 'https://github.com/Abhivanth-08/College_chatbot',
     github: 'https://github.com/Abhivanth-08/College_chatbot',
+    videoDemo: 'https://www.youtube.com/watch?v=YOUR_VIDEO_ID_4',
   },
   {
     title: 'Resume Reformer Agent',
@@ -52,6 +56,7 @@ const projects = [
     gradient: 'from-primary/20 to-accent/20',
     demo: 'https://github.com/Abhivanth-08/Resume-Reformer',
     github: 'https://github.com/Abhivanth-08/Resume-Reformer',
+    videoDemo: 'https://github.com/Abhivanth-08/Resume-Reformer',
   },
   {
     title: 'Exhibit Defect Detection',
@@ -62,6 +67,7 @@ const projects = [
     gradient: 'from-accent/20 to-primary/20',
     demo: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
     github: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
+    videoDemo: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
   },
   {
     title: 'AI Foley Studio',
@@ -72,6 +78,7 @@ const projects = [
     gradient: 'from-secondary/20 to-accent/20',
     demo: 'https://ai-foley-studio.vercel.app/',
     github: 'https://github.com/Abhivanth-08/AI-Foley-Studio',
+    videoDemo: 'https://drive.google.com/drive/folders/1o8PQB6rwEYRyLXKbwAnZMQhm6hCHilEZ?usp=sharing',
   },
   {
     title: 'E Commerce Website',
@@ -82,6 +89,7 @@ const projects = [
     gradient: 'from-primary/20 to-accent/20',
     demo: 'https://jvenerprise.vercel.app', 
     github: 'https://github.com/Abhivanth-08/JV_web',
+    videoDemo: 'https://jvenerprise.vercel.app',
   },
   {
     title: 'Pull Request Review Agent',
@@ -91,6 +99,7 @@ const projects = [
     gradient: 'from-primary/20 to-accent/20',
     demo: 'https://pr-review-phi.vercel.app', 
     github: 'https://github.com/Abhivanth-08/PR_review',
+    videoDemo: 'https://drive.google.com/drive/folders/1EU9gvhDgZBc5uS8QC4R0D6nurWxBfLGF?usp=sharing',
   }
 ];
 
@@ -187,7 +196,7 @@ export const Projects = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <a
                       href={project.demo}
                       target="_blank"
@@ -196,6 +205,15 @@ export const Projects = () => {
                     >
                       <ExternalLink className="w-4 h-4" />
                       <span className="text-sm font-medium">View</span>
+                    </a>
+                    <a
+                      href={project.videoDemo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-accent/20 hover:bg-accent/30 border border-accent/30 text-accent transition-colors duration-300"
+                    >
+                      <Video className="w-4 h-4" />
+                      <span className="text-sm font-medium">Demo</span>
                     </a>
                     <a
                       href={project.github}
