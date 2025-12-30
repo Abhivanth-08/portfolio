@@ -17,6 +17,30 @@ interface CertificationGroup {
 
 const certificationGroups: CertificationGroup[] = [
   {
+    organization: 'Publications',
+    gradient: 'from-accent/20 to-primary/20',
+    certificates: [
+      {
+        title: 'A Modular RAG Chatbot for College Information Systems',
+        description: 'Presented at Engineering Advances 2025 Second International Conference. Paper on advanced document parsing and serverless vector database implementation.',
+        date: '2025',
+        link: 'https://drive.google.com/file/d/1qPWxzcz9N55vFHWK8qcbflkcR805lxBz/view?usp=sharing',
+      },
+    ],
+  },
+  {
+    organization: 'NVIDIA',
+    gradient: 'from-primary/20 to-accent/20',
+    certificates: [
+      {
+        title: 'Getting Started with AI on Jetson Nano',
+        description: 'Hands-on training in deploying AI models on NVIDIA Jetson Nano for edge computing applications.',
+        date: '2025',
+        link: 'https://drive.google.com/file/d/1LZxwlTSNTSxHRs4WD4CaZHHRut1iP56n/view?usp=sharing',
+      },
+    ],
+  },
+  {
     organization: 'NPTEL',
     gradient: 'from-primary/20 to-accent/20',
     certificates: [

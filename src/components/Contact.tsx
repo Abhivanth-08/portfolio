@@ -4,7 +4,13 @@ import { Mail, Linkedin, Github, Code2, Send, Terminal, Download } from 'lucide-
 import emailjs from '@emailjs/browser';
 
 // Social links
-const socialLinks = [
+const socialLinks: Array<{
+  icon: any;
+  label: string;
+  href: string;
+  color: string;
+  download?: boolean;
+}> = [
   { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/abhivanth-r-223b2b281', color: 'hover:text-blue-400' },
   { icon: Github, label: 'GitHub', href: 'https://github.com/Abhivanth-08', color: 'hover:text-gray-300' },
   { icon: Code2, label: 'LeetCode', href: 'https://leetcode.com/u/Abhivanth_R', color: 'hover:text-yellow-400' },
@@ -190,8 +196,9 @@ export const Contact = () => {
               <motion.a
                 key={link.label}
                 href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={link.download ? undefined : "_blank"}
+                rel={link.download ? undefined : "noopener noreferrer"}
+                download={link.download ? "portfolio.zip" : undefined}
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}

@@ -1,11 +1,12 @@
 export const skillsData = [
   { 
-    name: 'AI & ML', 
+    name: 'AI/ML', 
     color: '#8B5CF6', 
     skills: [
       { name: 'PyTorch', description: 'Deep learning framework for neural networks' },
       { name: 'Scikit-learn', description: 'Classic ML library for models and pipelines' },
       { name: 'LangChain', description: 'Framework for building RAG-based intelligent LLM applications' },
+      { name: 'Azure AI', description: 'Microsoft Azure AI services for cloud-based ML solutions' },
       { name: 'NLP', description: 'Natural Language Processing techniques and tools' },
       { name: 'Deep Learning', description: 'Neural networks and representation learning' },
       { name: 'OpenCV', description: 'Computer vision library for image processing' },
@@ -14,7 +15,17 @@ export const skillsData = [
     ]
   },
   { 
-    name: 'Code Craft', 
+    name: 'IoT & Hardware', 
+    color: '#F59E0B', 
+    skills: [
+      { name: 'Raspberry Pi', description: 'Single-board computer for IoT projects' },
+      { name: 'Sensors', description: 'Environmental and motion sensing devices' },
+      { name: 'Arduino', description: 'Microcontroller platform for hardware projects' },
+      { name: 'Embedded Systems', description: 'Specialized computing systems in devices' }
+    ]
+  },
+  { 
+    name: 'Programming Languages', 
     color: '#3B82F6', 
     skills: [
       { name: 'Python', description: 'Versatile language for AI, data science, and automation' },
@@ -25,26 +36,17 @@ export const skillsData = [
     ]
   },
   { 
-    name: 'Dev Tools', 
+    name: 'Tools & Platforms', 
     color: '#10B981', 
     skills: [
       { name: 'FastAPI', description: 'Modern Python web framework for APIs' },
+      { name: 'Docker', description: 'Containerization platform for application deployment' },
       { name: 'GitHub', description: 'Version control and collaboration platform' },
       { name: 'Docling', description: 'Document processing and analysis tool' },
       { name: 'LanceDB', description: 'Vector database for AI applications' },
       { name: 'Blender', description: '3D modeling and animation software' }
     ]
-  },
-  { 
-    name: 'AI & IoT', 
-    color: '#F59E0B', 
-    skills: [
-      { name: 'Raspberry Pi', description: 'Single-board computer for IoT projects' },
-      { name: 'Sensors', description: 'Environmental and motion sensing devices' },
-      { name: 'Arduino', description: 'Microcontroller platform for hardware projects' },
-      { name: 'Embedded Systems', description: 'Specialized computing systems in devices' }
-    ]
-  },
+  }
 ];
 
 export type SkillCategory = typeof skillsData[number];

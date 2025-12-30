@@ -1,107 +1,8 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { ExternalLink, Github, Video } from 'lucide-react';
-
-const projects = [
-  {
-    title: 'Versatile Mini Robot',
-    category: 'Robotics & IoT',
-    description:
-      'Designed a multifunctional robot with object recognition, color detection, QR/text scanning, translation, and virtual assistance.',
-    tech: ['Python', 'OpenCV', 'Raspberry Pi', 'Sensors'],
-    gradient: 'from-primary/20 to-accent/20',
-    demo: 'https://drive.google.com/drive/folders/17Tsc5v9g0u-DJGQ5VVJw4F3BlIyOnl7W?usp=sharing', 
-    github: 'https://github.com/Abhivanth-08/Mini_Robot',
-    videoDemo: 'https://drive.google.com/drive/folders/17Tsc5v9g0u-DJGQ5VVJw4F3BlIyOnl7W?usp=sharing',
-  },
-  {
-    title: 'NDT Robot',
-    category: 'Industrial Automation',
-    description:
-      'Autonomous mini robot using ultrasonic, infrared, and eddy current sensors for real-time crack and defect detection with ML.',
-    tech: ['Python', 'OpenCV', 'Sensors', 'ML', 'Raspberry Pi'],
-    gradient: 'from-accent/20 to-primary/20',
-    demo: 'https://drive.google.com/drive/folders/1UBrKCh7Dp9HvPaqHzBxQhZXCg3emEnlA?usp=sharing',
-    github: 'https://github.com/Abhivanth-08/NDT',
-    videoDemo: 'https://drive.google.com/drive/folders/1UBrKCh7Dp9HvPaqHzBxQhZXCg3emEnlA?usp=sharing',
-  },
-  {
-    title: 'Info Redaction Agent',
-    category: 'AI & NLP',
-    description:
-      'AI system to automatically detect and redact PII from PDFs, text, and structured data ensuring privacy compliance.',
-    tech: ['Python', 'LangChain', 'PyMuPDF', 'Docling', 'FastAPI','TypeScript'],
-    gradient: 'from-primary/20 to-accent/20',
-    demo: 'https://0207abhi-info-redaction.hf.space',
-    github: 'https://github.com/Abhivanth-08/info_redaction_main',
-    videoDemo: 'https://drive.google.com/drive/folders/1w_GbbsPzRUHrAsVCgLtWMCYKCrHNrujU?usp=sharing',
-  },
-  {
-    title: 'College Chatbot',
-    category: 'AI Assistant',
-    description:
-      'AI-powered chatbot automating admissions, events, food orders, and exam prep with real-time data access for the college.',
-    tech: ['Python', 'LangChain', 'Docling', 'LanceDB', 'FastAPI','TypeScript'],
-    gradient: 'from-accent/20 to-primary/20',
-    demo: 'https://github.com/Abhivanth-08/College_chatbot',
-    github: 'https://github.com/Abhivanth-08/College_chatbot',
-    videoDemo: 'https://www.youtube.com/watch?v=YOUR_VIDEO_ID_4',
-  },
-  {
-    title: 'Resume Reformer Agent',
-    category: 'AI Tools',
-    description:
-      'AI agent that reformats and optimizes resumes based on job descriptions to improve ATS compatibility and keyword alignment.',
-    tech: ['Python', 'LangChain', 'Prompt Engineering', 'PyMuPDF', 'Docling'],
-    gradient: 'from-primary/20 to-accent/20',
-    demo: 'https://github.com/Abhivanth-08/Resume-Reformer',
-    github: 'https://github.com/Abhivanth-08/Resume-Reformer',
-    videoDemo: 'https://github.com/Abhivanth-08/Resume-Reformer',
-  },
-  {
-    title: 'Exhibit Defect Detection',
-    category: 'Computer Vision',
-    description:
-      'AI-CNN-based system integrated with IoT for detecting defects in museum exhibits and enabling predictive maintenance.',
-    tech: ['Python', 'PyTorch', 'CNN', 'Raspberry Pi'],
-    gradient: 'from-accent/20 to-primary/20',
-    demo: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
-    github: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
-    videoDemo: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
-  },
-  {
-    title: 'AI Foley Studio',
-    category: 'AI / Audio-Tech',
-    description:
-      'Developed an AI-powered web tool that automatically generates and syncs realistic Foley sound effects for video clips, enhancing audio quality and immersion using machine learning and audio processing.',
-    tech: ['Langchain', 'Computer Vision','Mediapipe','YOLO','TypeScript','FastAPI'],
-    gradient: 'from-secondary/20 to-accent/20',
-    demo: 'https://ai-foley-studio.vercel.app/',
-    github: 'https://github.com/Abhivanth-08/AI-Foley-Studio',
-    videoDemo: 'https://drive.google.com/drive/folders/1o8PQB6rwEYRyLXKbwAnZMQhm6hCHilEZ?usp=sharing',
-  },
-  {
-    title: 'E Commerce Website',
-    category: 'Web Development',
-    description:
-      "J.V.Enterprise's  e-commerce platform designed to provide a seamless online shopping experience. It features user-friendly navigation, and a robust product management system, catering to both customers and sellers.",
-    tech: ['TypeScript','Supabase'],
-    gradient: 'from-primary/20 to-accent/20',
-    demo: 'https://jvenerprise.vercel.app', 
-    github: 'https://github.com/Abhivanth-08/JV_web',
-    videoDemo: 'https://jvenerprise.vercel.app',
-  },
-  {
-    title: 'Pull Request Review Agent',
-    category: 'AI Tools',
-    description:"An AI-powered Pull Request Review Agent that automatically analyzes PRs, summarizes changes, identifies issues, and provides actionable feedback. Built to speed up code reviews and improve developer productivity with intelligent insights.",
-    tech: ['TypeScript','Langchain','FastAPI','Github API'],
-    gradient: 'from-primary/20 to-accent/20',
-    demo: 'https://pr-review-phi.vercel.app', 
-    github: 'https://github.com/Abhivanth-08/PR_review',
-    videoDemo: 'https://drive.google.com/drive/folders/1EU9gvhDgZBc5uS8QC4R0D6nurWxBfLGF?usp=sharing',
-  }
-];
+import { ExternalLink, Github, Video, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { projects } from '@/data/projectsData';
 
 export const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -156,7 +57,7 @@ export const Projects = () => {
                   rotateY: 5,
                   transition: { duration: 0.3 },
                 }}
-                className="relative h-full p-8 rounded-2xl glass-panel border border-primary/20 hover:border-primary/50 transition-all duration-500 overflow-hidden"
+                className="relative h-full p-8 rounded-2xl glass-panel border border-primary/20 hover:border-primary/50 transition-all duration-500 overflow-hidden flex flex-col"
                 style={{ transformStyle: 'preserve-3d' }}
               >
                 {/* Gradient Background */}
@@ -167,9 +68,9 @@ export const Projects = () => {
                 {/* Glow Effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 blur-2xl bg-primary/20 transition-opacity duration-500" />
 
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col h-full">
                   {/* Category */}
-                  <div className="inline-block px-4 py-2 mb-4 rounded-lg bg-primary/10 border border-primary/30 text-primary text-sm font-semibold">
+                  <div className="w-fit px-4 py-2 mb-4 rounded-lg bg-primary/10 border border-primary/30 text-primary text-sm font-semibold">
                     {project.category}
                   </div>
 
@@ -179,12 +80,12 @@ export const Projects = () => {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-muted-foreground mb-6 leading-relaxed flex-1">
                     {project.description}
                   </p>
 
                   {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
@@ -225,6 +126,15 @@ export const Projects = () => {
                       <span className="text-sm font-medium">Code</span>
                     </a>
                   </div>
+
+                  {/* View Details Link */}
+                  <Link
+                    to={`/project/${project.id}`}
+                    className="mt-4 flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-primary/30 to-accent/30 hover:from-primary/40 hover:to-accent/40 border border-primary/40 text-foreground font-semibold transition-all duration-300 group/link"
+                  >
+                    <span>View Full Details</span>
+                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" />
+                  </Link>
                 </div>
 
                 {/* Corner Decorations */}
