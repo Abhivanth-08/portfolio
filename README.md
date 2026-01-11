@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Personal Portfolio
 
 ## Description
@@ -235,3 +236,7 @@ A PDF version of the resume is included: `ABHIVANTH R.pdf`
 - More 3D interactions
 - Analytics integration
 - Multi-language support
+=======
+Abhivanth's Portfolio
+Personal portfolio website showcasing projects, skills, and resume 
+>>>>>>> 22b56681c6f5b5985e78413b49781ad69ced4c18
