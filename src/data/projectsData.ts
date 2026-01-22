@@ -222,6 +222,32 @@ export const projects: Project[] = [
       'Implementing predictive maintenance without historical failure data',
       'Deploying edge inference on resource-constrained Raspberry Pi for continuous monitoring'
     ],
+  },
+  {
+    id: 'llm-internals-explorer',
+    title: 'LLM Internals Explorer',
+    category: 'AI / ML Education',
+    description:
+      'See what\'s actually happening inside GPT-2 and BERT. Most LLM tutorials show you APIs—this shows you the math, the attention, the embeddings using real models, not simulations.',
+    fullDescription:
+      'An innovative educational platform that demystifies Large Language Models by exposing their internal mechanics. Unlike typical LLM tutorials that only show API usage, this tool provides deep insights into transformer architecture through real GPT-2 and BERT inference. The platform features an Attention Head Personality Profiler that reveals how GPT-2\'s 144 attention heads have specialized into distinct roles: Syntax Trackers, Semantic Linkers, Positional Encoders, Rare Pattern Detectors, and Context Aggregators. Users can explore actual attention weights across all 12 layers × 12 heads, perform semantic vector arithmetic (King - Man + Woman = Queen) in 3D space, analyze BPE tokenization in real-time, and visualize the "Lost in the Middle" phenomenon in context windows. Built with real transformer forward passes, it includes AI security analysis with prompt injection detection, LLM cost routing across providers, and interactive mathematical formulas showing attention equations and softmax operations.',
+    tech: ['Python', 'React', 'FastAPI', 'PyTorch', 'Transformers', 'scikit-learn', 'TypeScript', 'Vite', 'TailwindCSS', 'React Three Fiber', 'Plotly'],
+    gradient: 'from-primary/20 to-accent/20',
+    demo: 'https://llm-workflow-five.vercel.app/',
+    github: 'https://github.com/Abhivanth-08/LLM_WORKFLOW',
+    videoDemo: '',
+    demoType: 'live',
+    architecture: 'Frontend (React + TypeScript + Three.js) → API Gateway (FastAPI) → Model Loading (GPT-2 124M / all-MiniLM-L6-v2) → Inference Engine (PyTorch + Transformers) → Feature Extraction → t-SNE Clustering → Visualization Pipeline (Plotly + 3D Canvas) → Interactive UI Components',
+    challenges: [
+      'Running GPT-2 inference server-side while maintaining low latency for interactive visualizations',
+      'Clustering 144 attention heads by behavior using t-SNE on high-dimensional attention pattern features',
+      'Creating intuitive 3D visualizations that accurately represent complex mathematical concepts (attention, embeddings)',
+      'Balancing educational depth with user experience—showing real math without overwhelming beginners',
+      'Extracting and displaying meaningful attention patterns from 12 layers × 12 heads × variable sequence lengths',
+      'Building a performant React frontend that handles real-time 3D rendering of neural network components',
+      'Designing canonical sentence sets that reveal distinct head personalities without manual labeling',
+      'Implementing AI security analysis (prompt injection detection) with graceful fallback to heuristics'
+    ],
   }
 ];
 
