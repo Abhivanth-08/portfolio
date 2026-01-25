@@ -231,7 +231,7 @@ export const Contact = () => {
           transition={{ delay: 1, duration: 0.8 }}
           className="mt-20 text-center"
         >
-          <p className="text-muted-foreground text-sm">© 2025 Abhivanth R.</p>
+          <p className="text-muted-foreground text-sm">© 2026 Abhivanth R.</p>
         </motion.div>
       </div>
     </section>
