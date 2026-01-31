@@ -2,6 +2,7 @@ import { Hero3D } from '@/components/Hero3D';
 import { About } from '@/components/About';
 import { Projects } from '@/components/Projects';
 import { Skills } from '@/components/Skills';
+import { Blogs } from '@/components/Blogs';
 import { Education } from '@/components/Education';
 import { Certifications } from '@/components/Certifications';
 import { Contact } from '@/components/Contact';
@@ -10,9 +11,9 @@ import { FloatingObjects } from '@/components/FloatingObjects';
 const Index = () => {
   return (
     <div className="relative w-full overflow-x-hidden">
-  {/* Floating 3D Objects Background (now using logo planes) */}
-  <FloatingObjects />
-      
+      {/* Floating 3D Objects Background (now using logo planes) */}
+      <FloatingObjects />
+
       {/* Smooth scroll behavior */}
       <style>{`
         html {
@@ -23,7 +24,7 @@ const Index = () => {
       {/* Navigation - Floating */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-8 py-4 glass-panel rounded-full border border-primary/30 backdrop-blur-lg">
         <ul className="flex gap-8 font-display text-sm font-bold">
-          {['About', 'Projects', 'Skills', 'Education', 'Certifications', 'Contact'].map((item) => (
+          {['About', 'Projects', 'Skills', 'Blogs', 'Education', 'Certifications', 'Contact'].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}
@@ -43,6 +44,7 @@ const Index = () => {
         <About />
         <Projects />
         <Skills />
+        <Blogs />
         <Education />
         <Certifications />
         <Contact />
