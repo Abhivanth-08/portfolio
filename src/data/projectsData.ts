@@ -22,11 +22,11 @@ export const projects: Project[] = [
     category: 'Robotics & IoT',
     description:
       'Designed a multifunctional robot with object recognition, color detection, QR/text scanning, translation, and virtual assistance.',
-    fullDescription: 
+    fullDescription:
       'A comprehensive robotics project featuring a multifunctional mini robot equipped with advanced capabilities. The robot integrates computer vision for object recognition and color detection, OCR technology for QR code and text scanning, natural language processing for translation services, and virtual assistance features. Built using Raspberry Pi as the central processing unit with multiple sensors for environmental interaction.',
     tech: ['Python', 'OpenCV', 'Raspberry Pi', 'Sensors'],
     gradient: 'from-primary/20 to-accent/20',
-    demo: 'https://drive.google.com/drive/folders/17Tsc5v9g0u-DJGQ5VVJw4F3BlIyOnl7W?usp=sharing', 
+    demo: 'https://drive.google.com/drive/folders/17Tsc5v9g0u-DJGQ5VVJw4F3BlIyOnl7W?usp=sharing',
     github: 'https://github.com/Abhivanth-08/Mini_Robot',
     videoDemo: 'https://youtu.be/i9UhpPylS8M',
     demoType: 'repository',
@@ -70,7 +70,7 @@ export const projects: Project[] = [
       'AI system to automatically detect and redact PII from PDFs, text, and structured data ensuring privacy compliance.',
     fullDescription:
       'An intelligent AI-powered system designed to automatically detect and redact Personally Identifiable Information (PII) from various document formats. The system processes PDFs, text documents, and structured data to identify sensitive information such as names, addresses, social security numbers, and other personal details. Built with compliance in mind, it ensures adherence to privacy regulations like GDPR and CCPA. The solution uses advanced NLP techniques and is deployed with a FastAPI backend and TypeScript frontend.',
-    tech: ['Python', 'LangChain', 'PyMuPDF', 'Docling', 'FastAPI','TypeScript'],
+    tech: ['Python', 'LangChain', 'PyMuPDF', 'Docling', 'FastAPI', 'TypeScript'],
     gradient: 'from-primary/20 to-accent/20',
     demo: 'https://0207abhi-info-redaction.hf.space',
     github: 'https://github.com/Abhivanth-08/info_redaction_main',
@@ -93,7 +93,7 @@ export const projects: Project[] = [
       'Developed an AI-powered web tool that automatically generates and syncs realistic Foley sound effects for video clips, enhancing audio quality and immersion using machine learning and audio processing.',
     fullDescription:
       'An innovative AI-powered platform for automatic Foley sound effect generation and synchronization. The system analyzes video content using computer vision techniques (MediaPipe and YOLO) to detect actions, movements, and events that require sound effects. It then automatically generates and syncs realistic Foley sounds to enhance the audio quality and immersion of video content. Built with LangChain for intelligent decision-making, the application features a TypeScript frontend and FastAPI backend, making professional-grade audio production accessible to content creators.',
-    tech: ['Langchain', 'Computer Vision','Mediapipe','YOLO','TypeScript','FastAPI'],
+    tech: ['Langchain', 'Computer Vision', 'Mediapipe', 'YOLO', 'TypeScript', 'FastAPI'],
     gradient: 'from-secondary/20 to-accent/20',
     demo: 'https://ai-foley-studio.vercel.app/',
     github: 'https://github.com/Abhivanth-08/AI-Foley-Studio',
@@ -116,9 +116,9 @@ export const projects: Project[] = [
       "J.V.Enterprise's e-commerce platform designed to provide a seamless online shopping experience. It features user-friendly navigation, and a robust product management system, catering to both customers and sellers.",
     fullDescription:
       "A full-featured e-commerce platform built for J.V.Enterprise, providing a comprehensive online shopping solution. The platform offers an intuitive user interface with seamless navigation, secure payment processing, and a robust product management system. Built with TypeScript for type safety and Supabase for backend services, it includes features such as user authentication, product catalog management, shopping cart functionality, order tracking, and an admin dashboard. The platform is designed to serve both customers and sellers with dedicated interfaces for each user type.",
-    tech: ['TypeScript','Supabase'],
+    tech: ['TypeScript', 'Supabase'],
     gradient: 'from-primary/20 to-accent/20',
-    demo: 'https://jvenerprise.vercel.app', 
+    demo: 'https://jvenerprise.vercel.app',
     github: 'https://github.com/Abhivanth-08/JV_web',
     videoDemo: 'https://jvenerprise.vercel.app',
     demoType: 'live',
@@ -139,9 +139,9 @@ export const projects: Project[] = [
       "An AI-powered Pull Request Review Agent that automatically analyzes PRs, summarizes changes, identifies issues, and provides actionable feedback. Built to speed up code reviews and improve developer productivity with intelligent insights.",
     fullDescription:
       'An intelligent AI-powered tool designed to streamline the code review process. This automated PR review agent analyzes pull requests comprehensively, providing detailed summaries of code changes, identifying potential issues, security vulnerabilities, and code quality concerns. Using LangChain for natural language processing and the GitHub API for repository integration, the agent delivers actionable feedback to developers. The TypeScript and FastAPI-based system integrates seamlessly into existing development workflows, significantly reducing review time while maintaining high code quality standards.',
-    tech: ['TypeScript','Langchain','FastAPI','Github API'],
+    tech: ['TypeScript', 'Langchain', 'FastAPI', 'Github API'],
     gradient: 'from-primary/20 to-accent/20',
-    demo: 'https://pr-review-phi.vercel.app', 
+    demo: 'https://pr-review-phi.vercel.app',
     github: 'https://github.com/Abhivanth-08/PR_review',
     videoDemo: 'https://youtu.be/fddj0gHc6f0',
     demoType: 'live',
@@ -188,12 +188,12 @@ export const projects: Project[] = [
       'AI-powered chatbot automating admissions, events, food orders, and exam prep with real-time data access for the college.',
     fullDescription:
       'A comprehensive AI-powered chatbot solution designed specifically for college operations. This intelligent assistant automates multiple aspects of campus life including admissions inquiries, event management, food ordering services, and exam preparation support. The chatbot leverages LangChain for natural language understanding, Docling for document processing, and LanceDB for efficient vector storage and retrieval. It provides real-time access to college data and can handle multiple concurrent user requests through its FastAPI backend.',
-    tech: ['Python', 'LangChain', 'Docling', 'LanceDB', 'FastAPI','TypeScript'],
+    tech: ['Python', 'LangChain', 'Docling', 'LanceDB', 'FastAPI', 'TypeScript'],
     gradient: 'from-accent/20 to-primary/20',
-    demo: 'https://github.com/Abhivanth-08/College_chatbot',
+    demo: 'https://college-chatbot-seven.vercel.app/',
     github: 'https://github.com/Abhivanth-08/College_chatbot',
-    videoDemo: '',
-    demoType: 'repository',
+    videoDemo: 'https://youtu.be/r_K1-GYmdTo',
+    demoType: 'live',
     architecture: 'User Query → Intent Classification → Document Retrieval (LanceDB Vector Store) → Context Extraction (Docling) → LangChain RAG Pipeline → Multi-Service Integration (Admissions/Events/Food/Exam APIs) → Response Generation → User Interface',
     challenges: [
       'Building a unified conversational interface for diverse domains (admissions, food, exams, events)',
