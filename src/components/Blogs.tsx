@@ -17,7 +17,7 @@ const blogs: Blog[] = [
     title: "AI Foley Studio",
     description: "Teaching Machines to Hear: How I Built an AI Foley Studio That Syncs Footsteps in Real Time.",
     url: "https://medium.com/@abhicoder39/introduction-0d08e502f1af",
-    date: "2024",
+    date: "2026",
     category: "Technical Writing",
     readTime: "5 min read",
     gradient: "from-primary/20 via-accent/20 to-primary/20"
@@ -26,7 +26,7 @@ const blogs: Blog[] = [
     title: "Beyond Autoregression: How VL-JEPA Redefines Vision-Language Models",
     description: "A deep dive into VL-JEPA's revolutionary approach to vision-language modeling, exploring how it moves beyond traditional autoregressive methods to create more efficient and powerful multimodal AI systems.",
     url: "https://medium.com/@abhicoder39/beyond-autoregression-how-vl-jepa-redefines-vision-language-models-39a2e8d7c414",
-    date: "2024",
+    date: "2026",
     category: "AI Research",
     readTime: "8 min read",
     gradient: "from-accent/20 via-primary/20 to-accent/20"
@@ -143,7 +143,7 @@ export const Blogs = () => {
 
                   {/* Neural Connection Indicator */}
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="w-3 h-3 rounded-full bg-primary animate-pulse" 
+                    <div className="w-3 h-3 rounded-full bg-primary animate-pulse"
                       style={{
                         boxShadow: '0 0 10px hsl(var(--primary))',
                       }}
