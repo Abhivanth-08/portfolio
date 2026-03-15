@@ -238,7 +238,7 @@ export const projects: Project[] = [
     gradient: 'from-accent/20 to-primary/20',
     demo: 'https://museum-defect-detector.vercel.app/',
     github: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
-    videoDemo: '',
+    videoDemo: 'https://youtu.be/peBW46ALaEw',
     demoType: 'live',
     architecture: 'Video Input (File/Live) → YOLO Human Masking → Spatial/Temporal JEPA Heads → Deep SVDD Energy Model → Anomaly Scoring → WebSockets/SSE Streaming → Frontend Client',
     challenges: [
