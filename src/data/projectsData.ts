@@ -228,25 +228,25 @@ export const projects: Project[] = [
   },
   {
     id: 'exhibit-defect-detection',
-    title: 'Exhibit Defect Detection',
+    title: 'JEPA Exhibit Defect Detection',
     category: 'Computer Vision',
     description:
-      'AI-CNN-based system integrated with IoT for detecting defects in museum exhibits and enabling predictive maintenance.',
+      'Advanced AI backend using Joint-Embedding Predictive Architecture (JEPA) to identify anomalies in real-time video streams for exhibition environments.',
     fullDescription:
-      'A sophisticated computer vision system designed for museum exhibit preservation. This AI-powered solution uses Convolutional Neural Networks (CNN) to detect defects and deterioration in museum exhibits. Integrated with IoT devices through Raspberry Pi, the system continuously monitors exhibit conditions and can predict maintenance needs before visible damage occurs. Built with PyTorch for deep learning capabilities, it provides real-time alerts and detailed analysis reports to help preserve valuable artifacts and exhibits.',
-    tech: ['Python', 'PyTorch', 'CNN', 'Raspberry Pi'],
+      'The JEPA Exhibit Defect Detection System is an advanced AI backend engineered to identify anomalies or physical defects in real-time video streams, specifically designed for exhibition or CCTV environments. It operates under a self-supervised learning paradigm, eliminating the need for massively labeled sets of "defective" data by exclusively learning the patterns of "normal" behavior instead. At its core, the system utilizes a Joint-Embedding Predictive Architecture (JEPA), which breaks down video frames into components and learns to predict future spatial and temporal representations. The architecture incorporates Temporal Transformers to understand both short-term actions and long-term activity contexts. For spatial awareness, a Spatial JEPA Head cross-examines patches of video to detect localized physical anomalies. To generate a final definitive anomaly score, it employs a Deep SVDD (Support Vector Data Description) Energy Model which flags any events or objects that heavily deviate from the learned "normal" manifold. Built on FastAPI, the platform offers a robust and asynchronous API supporting standard video file uploads as well as live streaming. A significant feature is its real-time processing capability, utilizing WebSockets and Server-Sent Events (SSE) to stream inference progress, frame-by-frame anomaly scores, and base64-encoded visual outputs directly to a frontend client. To combat false positives triggered by irrelevant dynamic elements—such as people walking past the camera—a YOLO-based Human Masking filter is integrated during the preprocessing phase. The system offers a complete end-to-end pipeline: Training on a normal baseline video, Calibrating a dynamic anomaly threshold based on the specific environment, and Detecting defects live or on uploaded test footage. Ultimately, this multi-stage pipeline provides a highly configurable, latency-optimized, and deeply analytical tool for maintaining quality control and security in physical exhibition spaces.',
+    tech: ['Python', 'FastAPI', 'JEPA', 'PyTorch', 'YOLO', 'WebSockets', 'Deep SVDD'],
     gradient: 'from-accent/20 to-primary/20',
-    demo: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
+    demo: 'https://museum-defect-detector.vercel.app/',
     github: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
     videoDemo: '',
-    demoType: 'repository',
-    architecture: 'IoT Cameras (Raspberry Pi) → Image Capture → Preprocessing → CNN Model (PyTorch) → Defect Detection → Temporal Analysis (Change Detection) → Predictive Maintenance Engine → Alert System / Dashboard',
+    demoType: 'live',
+    architecture: 'Video Input (File/Live) → YOLO Human Masking → Spatial/Temporal JEPA Heads → Deep SVDD Energy Model → Anomaly Scoring → WebSockets/SSE Streaming → Frontend Client',
     challenges: [
-      'Training CNN models with limited labeled defect data from museum artifacts',
-      'Detecting subtle deterioration (cracks, discoloration, structural changes) against complex backgrounds',
-      'Handling varying lighting conditions and camera angles in museum environments',
-      'Implementing predictive maintenance without historical failure data',
-      'Deploying edge inference on resource-constrained Raspberry Pi for continuous monitoring'
+      'Implementing self-supervised learning to predict spatial and temporal representations without labeled defect data',
+      'Managing real-time inference and streaming via WebSockets and SSE for frame-by-frame analysis',
+      'Integrating a YOLO-based human masking filter to effectively reduce false positives from dynamic elements',
+      'Architecting Temporal Transformers to understand both short-term actions and long-term activity contexts',
+      'Optimizing latency across the entire end-to-end pipeline from training to live defect detection'
     ],
   }
 ];
