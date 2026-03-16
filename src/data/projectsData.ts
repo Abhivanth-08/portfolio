@@ -204,29 +204,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'resume-reformer-agent',
-    title: 'Resume Reformer Agent',
-    category: 'AI Tools',
-    description:
-      'AI agent that reformats and optimizes resumes based on job descriptions to improve ATS compatibility and keyword alignment.',
-    fullDescription:
-      'An intelligent AI agent designed to optimize resumes for Applicant Tracking Systems (ATS). The system analyzes job descriptions and automatically reformats resumes to improve keyword alignment and ATS compatibility. Using advanced prompt engineering techniques and LangChain, the agent extracts key requirements from job postings and restructures resume content to highlight relevant skills and experiences. It processes PDF documents using PyMuPDF and Docling, ensuring that the output maintains professional formatting while maximizing job match scores.',
-    tech: ['Python', 'LangChain', 'Prompt Engineering', 'PyMuPDF', 'Docling'],
-    gradient: 'from-primary/20 to-accent/20',
-    demo: 'https://github.com/Abhivanth-08/Resume-Reformer',
-    github: 'https://github.com/Abhivanth-08/Resume-Reformer',
-    videoDemo: '',
-    demoType: 'repository',
-    architecture: 'Resume PDF Upload → Document Parsing (PyMuPDF/Docling) → Job Description Analysis → Keyword Extraction → LangChain Optimization Agent → Content Restructuring → ATS Compatibility Scoring → Formatted Output Generation',
-    challenges: [
-      'Extracting semantic meaning from varied resume formats and structures',
-      'Balancing keyword optimization with natural language flow (avoiding keyword stuffing)',
-      'Preserving user authenticity while adapting content to job requirements',
-      'Maintaining PDF formatting and visual hierarchy after text modifications',
-      'Handling edge cases like career gaps, job transitions, and non-traditional backgrounds'
-    ],
-  },
-  {
     id: 'exhibit-defect-detection',
     title: 'JEPA Exhibit Defect Detection',
     category: 'Computer Vision',
@@ -247,6 +224,29 @@ export const projects: Project[] = [
       'Integrating a YOLO-based human masking filter to effectively reduce false positives from dynamic elements',
       'Architecting Temporal Transformers to understand both short-term actions and long-term activity contexts',
       'Optimizing latency across the entire end-to-end pipeline from training to live defect detection'
+    ],
+  },
+  {
+    id: 'resume-reformer-agent',
+    title: 'Resume Reformer Agent',
+    category: 'AI Tools',
+    description:
+      'AI agent that reformats and optimizes resumes based on job descriptions to improve ATS compatibility and keyword alignment.',
+    fullDescription:
+      'An intelligent AI agent designed to optimize resumes for Applicant Tracking Systems (ATS). The system analyzes job descriptions and automatically reformats resumes to improve keyword alignment and ATS compatibility. Using advanced prompt engineering techniques and LangChain, the agent extracts key requirements from job postings and restructures resume content to highlight relevant skills and experiences. It processes PDF documents using PyMuPDF and Docling, ensuring that the output maintains professional formatting while maximizing job match scores.',
+    tech: ['Python', 'LangChain', 'Prompt Engineering', 'PyMuPDF', 'Docling'],
+    gradient: 'from-primary/20 to-accent/20',
+    demo: 'https://github.com/Abhivanth-08/Resume-Reformer',
+    github: 'https://github.com/Abhivanth-08/Resume-Reformer',
+    videoDemo: '',
+    demoType: 'repository',
+    architecture: 'Resume PDF Upload → Document Parsing (PyMuPDF/Docling) → Job Description Analysis → Keyword Extraction → LangChain Optimization Agent → Content Restructuring → ATS Compatibility Scoring → Formatted Output Generation',
+    challenges: [
+      'Extracting semantic meaning from varied resume formats and structures',
+      'Balancing keyword optimization with natural language flow (avoiding keyword stuffing)',
+      'Preserving user authenticity while adapting content to job requirements',
+      'Maintaining PDF formatting and visual hierarchy after text modifications',
+      'Handling edge cases like career gaps, job transitions, and non-traditional backgrounds'
     ],
   }
 ];
