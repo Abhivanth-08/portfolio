@@ -13,6 +13,7 @@ export interface Project {
   demoType?: 'live' | 'simulation' | 'repository' | 'interactive'; // Type of demo
   architecture?: string; // System architecture flow
   challenges?: string[]; // What makes this project technically challenging
+  huggingface?: string; // Hugging Face Space/Model link
 }
 
 export const projects: Project[] = [
@@ -74,6 +75,7 @@ export const projects: Project[] = [
     gradient: 'from-primary/20 to-accent/20',
     demo: 'https://0207abhi-info-redaction.hf.space',
     github: 'https://github.com/Abhivanth-08/info_redaction_main',
+    huggingface: 'https://huggingface.co/spaces/Siva0801/pii',
     videoDemo: 'https://youtu.be/lrfmWWnmnu0',
     demoType: 'live',
     architecture: 'Document Upload → Document Parsing (PyMuPDF/Docling) → Text Extraction → NER Models (LangChain) → PII Pattern Matching → Redaction Engine → GDPR/CCPA Compliance Validation → Redacted Output (PDF/Text)',
@@ -97,6 +99,7 @@ export const projects: Project[] = [
     gradient: 'from-secondary/20 to-accent/20',
     demo: 'https://ai-foley-studio.vercel.app/',
     github: 'https://github.com/Abhivanth-08/AI-Foley-Studio',
+    huggingface: 'https://huggingface.co/spaces/abhi02072005/ai-foley-studio-backend',
     videoDemo: ' https://youtu.be/p_SFvmGrAnE',
     demoType: 'live',
     architecture: 'Video Input → Frame Extraction → Computer Vision (YOLO/MediaPipe) → Action/Event Detection → LangChain Decision Engine → Sound Effect Selection/Generation → Audio Timing Synchronization → Mixed Audio Output',
@@ -143,6 +146,7 @@ export const projects: Project[] = [
     gradient: 'from-primary/20 to-accent/20',
     demo: 'https://pr-review-phi.vercel.app',
     github: 'https://github.com/Abhivanth-08/PR_review',
+    huggingface: 'https://huggingface.co/spaces/abhi02072005/PR_review',
     videoDemo: 'https://youtu.be/fddj0gHc6f0',
     demoType: 'live',
     architecture: 'GitHub Webhook/API → PR Diff Parsing → Code AST Analysis → LangChain Reasoning Engine → Security Scanner → Code Quality Checker → Comment Generator → GitHub Integration (Auto-comment on PR)',
@@ -166,6 +170,7 @@ export const projects: Project[] = [
     gradient: 'from-primary/20 to-accent/20',
     demo: 'https://llm-workflow-five.vercel.app/',
     github: 'https://github.com/Abhivanth-08/LLM_WORKFLOW',
+    huggingface: 'https://huggingface.co/spaces/abhi02072005/llmworkflow',
     videoDemo: 'https://www.youtube.com/watch?v=gXtoIvVpRog',
     demoType: 'live',
     architecture: 'Frontend (React + TypeScript + Three.js) → API Gateway (FastAPI) → Model Loading (GPT-2 124M / all-MiniLM-L6-v2) → Inference Engine (PyTorch + Transformers) → Feature Extraction → t-SNE Clustering → Visualization Pipeline (Plotly + 3D Canvas) → Interactive UI Components',
@@ -192,6 +197,7 @@ export const projects: Project[] = [
     gradient: 'from-accent/20 to-primary/20',
     demo: 'https://college-chatbot-seven.vercel.app/',
     github: 'https://github.com/Abhivanth-08/College_chatbot',
+    huggingface: 'https://huggingface.co/spaces/abhi02072005/college_chatbot_backend',
     videoDemo: 'https://youtu.be/r_K1-GYmdTo',
     demoType: 'live',
     architecture: 'User Query → Intent Classification → Document Retrieval (LanceDB Vector Store) → Context Extraction (Docling) → LangChain RAG Pipeline → Multi-Service Integration (Admissions/Events/Food/Exam APIs) → Response Generation → User Interface',
@@ -215,6 +221,7 @@ export const projects: Project[] = [
     gradient: 'from-accent/20 to-primary/20',
     demo: 'https://museum-defect-detector.vercel.app/',
     github: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
+    huggingface: 'https://huggingface.co/spaces/abhi02072005/JEPA_backend',
     videoDemo: 'https://youtu.be/peBW46ALaEw',
     demoType: 'live',
     architecture: 'Video Input (File/Live) → YOLO Human Masking → Spatial/Temporal JEPA Heads → Deep SVDD Energy Model → Anomaly Scoring → WebSockets/SSE Streaming → Frontend Client',

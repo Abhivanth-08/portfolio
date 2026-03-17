@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { ExternalLink, Github, Video, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { projects } from '@/data/projectsData';
+import { HuggingFaceIcon } from './HuggingFaceIcon';
 
 export const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -125,6 +126,17 @@ export const Projects = () => {
                       <Github className="w-4 h-4" />
                       <span className="text-sm font-medium">Code</span>
                     </a>
+                    {project.huggingface && (
+                      <a
+                        href={project.huggingface}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-yellow-500/10 hover:bg-yellow-500/20 border border-yellow-500/30 text-yellow-500 transition-colors duration-300"
+                      >
+                        <HuggingFaceIcon className="w-4 h-4" />
+                        <span className="text-sm font-medium">Space</span>
+                      </a>
+                    )}
                   </div>
 
                   {/* View Details Link */}

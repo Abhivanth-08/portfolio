@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Github, Video } from 'lucide-react';
 import { getProjectById } from '@/data/projectsData';
 import { useEffect } from 'react';
+import { HuggingFaceIcon } from '@/components/HuggingFaceIcon';
 
 const ProjectDetails = () => {
   const { projectId } = useParams<{ projectId: string }>();
@@ -122,6 +123,17 @@ const ProjectDetails = () => {
                 <Github className="w-4 h-4" />
                 <span className="text-sm font-medium hidden sm:inline">GitHub</span>
               </a>
+              {project.huggingface && (
+                <a
+                  href={project.huggingface}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-yellow-500/10 hover:bg-yellow-500/20 border border-yellow-500/30 text-yellow-500 transition-colors duration-300"
+                >
+                  <HuggingFaceIcon className="w-4 h-4" />
+                  <span className="text-sm font-medium hidden sm:inline">Hugging Face Space</span>
+                </a>
+              )}
             </div>
           </div>
         </motion.div>
@@ -294,6 +306,21 @@ const ProjectDetails = () => {
                       <div className="text-xs text-muted-foreground">View on GitHub</div>
                     </div>
                   </a>
+
+                  {project.huggingface && (
+                    <a
+                      href={project.huggingface}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 p-4 rounded-lg bg-yellow-500/5 hover:bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 transition-all duration-300 group"
+                    >
+                      <HuggingFaceIcon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                      <div>
+                        <div className="font-semibold">Hugging Face</div>
+                        <div className="text-xs text-yellow-500/70">View Space / Model</div>
+                      </div>
+                    </a>
+                  )}
                   
                   {project.videoDemo && (
                     <a

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useState, FormEvent } from 'react';
 import { Mail, Linkedin, Github, Code2, Send, Terminal, Download } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import { HuggingFaceIcon } from './HuggingFaceIcon';
 
 // Social links
 const socialLinks: Array<{
@@ -13,6 +14,7 @@ const socialLinks: Array<{
 }> = [
   { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/abhivanth-r-223b2b281', color: 'hover:text-blue-400' },
   { icon: Github, label: 'GitHub', href: 'https://github.com/Abhivanth-08', color: 'hover:text-gray-300' },
+  { icon: HuggingFaceIcon, label: 'Hugging Face', href: 'https://huggingface.co/abhi02072005', color: 'hover:text-yellow-500' },
   { icon: Code2, label: 'LeetCode', href: 'https://leetcode.com/u/Abhivanth_R', color: 'hover:text-yellow-400' },
   { icon: Mail, label: 'Email', href: 'mailto:abhicoder39@gmail.com', color: 'hover:text-red-400' },
   { icon: Download, label: 'Resume', href: 'https://drive.google.com/drive/folders/1IDmNuB4FX-_C1vHHt9TvQvyfLs3cuc52?usp=drive_link', color: 'hover:text-red-800' },
