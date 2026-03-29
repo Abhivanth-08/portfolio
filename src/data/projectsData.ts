@@ -222,7 +222,7 @@ export const projects: Project[] = [
     demo: 'https://museum-defect-detector.vercel.app/',
     github: 'https://github.com/Abhivanth-08/Exhibit_defect_detection_system',
     huggingface: 'https://huggingface.co/spaces/abhi02072005/JEPA_backend',
-    videoDemo: 'https://youtu.be/peBW46ALaEw',
+    videoDemo: 'https://youtu.be/QXVEDSoT5Rk',
     demoType: 'live',
     architecture: 'Video Input (File/Live) → YOLO Human Masking → Spatial/Temporal JEPA Heads → Deep SVDD Energy Model → Anomaly Scoring → WebSockets/SSE Streaming → Frontend Client',
     challenges: [
