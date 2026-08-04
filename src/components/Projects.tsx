@@ -108,15 +108,17 @@ export const Projects = () => {
                       <ExternalLink className="w-4 h-4" />
                       <span className="text-sm font-medium">View</span>
                     </a>
-                    <a
-                      href={project.videoDemo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-accent/20 hover:bg-accent/30 border border-accent/30 text-accent transition-colors duration-300"
-                    >
-                      <Video className="w-4 h-4" />
-                      <span className="text-sm font-medium">Demo</span>
-                    </a>
+                    {project.videoDemo && (
+                      <a
+                        href={project.videoDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-accent/20 hover:bg-accent/30 border border-accent/30 text-accent transition-colors duration-300"
+                      >
+                        <Video className="w-4 h-4" />
+                        <span className="text-sm font-medium">Demo</span>
+                      </a>
+                    )}
                     <a
                       href={project.github}
                       target="_blank"

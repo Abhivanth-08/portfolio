@@ -255,6 +255,29 @@ export const projects: Project[] = [
       'Maintaining PDF formatting and visual hierarchy after text modifications',
       'Handling edge cases like career gaps, job transitions, and non-traditional backgrounds'
     ],
+  },
+  {
+    id: 'ragverse',
+    title: 'RAGVERSE',
+    category: 'AI / ML Education',
+    description:
+      'A production-grade educational platform and interactive laboratory built with React, TypeScript, Plotly 3D, and FastAPI to visually demystify every stage of Retrieval-Augmented Generation (RAG).',
+    fullDescription:
+      'RAGVERSE is a production-grade, open-source educational platform and interactive laboratory built with React, TypeScript, Tailwind CSS, Plotly 3D, and a scalable FastAPI backend deployed on Railway to visually demystify every stage of Retrieval-Augmented Generation (RAG).\n\nThe platform features 10 interactive modules:\n• Document Parsing Lab: Ingests unstructured documents across 14+ formats—including PDF, DOCX, Markdown, CSV, JSON, HTML, audio, video, and images—extracting clean textual content and metadata for downstream processing.\n• Tokenizer Lab: Provides real-time tokenization analysis across industry-standard algorithms (GPT TikToken cl100k, BPE, WordPiece, SentencePiece, Unigram, and Character-level), displaying token boundaries, integer IDs, and attention masks.\n• Chunking Lab: Visualizes and evaluates 15+ segmentation strategies—ranging from Fixed, Recursive, and Sentence chunking to Semantic, Parent-Child, Hierarchical, and Agentic chunking—with customizable overlap and size controls.\n• Embedding Lab: Connects to leading embedding models (all-MiniLM-L6-v2, BGE, E5, Nomic, Jina, OpenAI, and Cohere) and renders interactive 3D vector space projections using PCA, t-SNE, and UMAP dimensionality reduction.\n• ANN Index Lab & Vector Database: Reveals the mathematical topology of Approximate Nearest Neighbor (ANN) indexing structures, illustrating Inverted File Index (IVF) Voronoi cells, HNSW graph edges, Product Quantization (PQ), and DiskANN.\n• Retrieval Explorer & Reranking Lab: Enables multi-modal search comparison across Dense, Sparse (TF), Okapi BM25, Reciprocal Rank Fusion (RRF), ColBERT, and Late Interaction, paired with second-stage Cross-Encoder and BGE rerankers.\n• Agentic RAG Module: Implements autonomous LangGraph reasoning traces (featuring planners, tool calling, memory, and reflection) to dynamically orchestrate multi-step queries over complex corpora.\n• Graph RAG & Multimodal RAG Modules: Extend semantic search by constructing explicit Neo4j Knowledge Graphs with Cypher query generation, while projecting cross-modal assets (OCR, audio transcriptions, charts, and tables) into a unified vector space.\n• Observability & Evaluation Observatory: Automates quality testing using RAGAS, DeepEval, and TruLens (evaluating Faithfulness, Answer Relevancy, Context Precision/Recall, and Hallucinations) alongside real-time telemetry for latency, token usage, and API costs.',
+    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Plotly 3D', 'FastAPI', 'LangGraph', 'Neo4j', 'RAGAS', 'Railway'],
+    gradient: 'from-primary/20 to-accent/20',
+    demo: 'https://rag-verse.vercel.app/',
+    github: 'https://github.com/Abhivanth-08/RAG_VERSE',
+    videoDemo: '',
+    demoType: 'live',
+    architecture: 'Document Ingestion (14+ Formats) → Tokenization (TikToken/BPE/SentencePiece) → Segmentation (15+ Chunking Strategies) → Embedding & 3D Projection (PCA/t-SNE/UMAP) → ANN Indexing (IVF/HNSW/DiskANN) → Hybrid Retrieval & Reranking (BM25/Dense/ColBERT/Cross-Encoder) → Agentic & Graph RAG Orchestration (LangGraph/Neo4j) → Observability & Evaluation (RAGAS/DeepEval/TruLens)',
+    challenges: [
+      'Rendering interactive 3D vector space projections (PCA, t-SNE, UMAP) for high-dimensional embeddings in real-time with Plotly 3D and React',
+      'Ingesting and extracting clean textual content and metadata across 14+ unstructured document formats including PDF, DOCX, audio, video, and images',
+      'Visualizing the mathematical topology of complex ANN indexing structures such as IVF Voronoi cells, HNSW graph edges, Product Quantization, and DiskANN',
+      'Orchestrating autonomous LangGraph reasoning traces with planners, tool calling, memory, and reflection over complex multi-modal corpora',
+      'Automating real-time quality evaluation and observability metrics (Faithfulness, Answer Relevancy, Context Precision/Recall) using RAGAS, DeepEval, and TruLens'
+    ],
   }
 ];
 

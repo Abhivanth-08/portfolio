@@ -30,6 +30,15 @@ const blogs: Blog[] = [
     category: "AI Research",
     readTime: "8 min read",
     gradient: "from-accent/20 via-primary/20 to-accent/20"
+  },
+  {
+    title: "From Retrieval to Memory: Understanding LLM Wiki, GBrain, and the Evolution Beyond Traditional RAG",
+    description: "An in-depth exploration of the evolution beyond traditional RAG, examining how architectures like LLM Wiki and GBrain transform static retrieval into persistent, dynamic memory for large language models.",
+    url: "https://medium.com/@abhicoder39/from-retrieval-to-memory-understanding-llm-wiki-gbrain-and-the-evolution-beyond-traditional-rag-0768150b5d27",
+    date: "2026",
+    category: "AI Research",
+    readTime: "7 min read",
+    gradient: "from-primary/20 via-accent/20 to-primary/20"
   }
 ];
 
@@ -73,7 +82,7 @@ export const Blogs = () => {
         </motion.div>
 
         {/* Blogs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {blogs.map((blog, index) => (
             <motion.div
               key={blog.url}
