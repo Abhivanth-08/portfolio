@@ -268,7 +268,7 @@ export const projects: Project[] = [
     gradient: 'from-primary/20 to-accent/20',
     demo: 'https://rag-verse.vercel.app/',
     github: 'https://github.com/Abhivanth-08/RAG_VERSE',
-    videoDemo: '',
+    videoDemo: 'https://youtu.be/WM0LzdZTwPQ',
     demoType: 'live',
     architecture: 'Document Ingestion (14+ Formats) → Tokenization (TikToken/BPE/SentencePiece) → Segmentation (15+ Chunking Strategies) → Embedding & 3D Projection (PCA/t-SNE/UMAP) → ANN Indexing (IVF/HNSW/DiskANN) → Hybrid Retrieval & Reranking (BM25/Dense/ColBERT/Cross-Encoder) → Agentic & Graph RAG Orchestration (LangGraph/Neo4j) → Observability & Evaluation (RAGAS/DeepEval/TruLens)',
     challenges: [
